@@ -117,7 +117,7 @@ abstract class Repository
 	 * @param  string $refColumn
 	 * @return EntityCollection
 	 */
-	protected function createCollection($selection, $entity = NULL, $refTable = NULL, $refColumn = NULL)
+	protected function createCollection(NSelection $selection, callable $entity = NULL, string $refTable = NULL, string $refColumn = NULL)
 	{
 		return new EntityCollection($selection, $entity === NULL ? [$this, 'createEntity'] : $entity, $refTable, $refColumn);
 	}
