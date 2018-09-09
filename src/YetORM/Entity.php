@@ -68,7 +68,7 @@ abstract class Entity
 	 * @param  string $name
 	 * @return mixed
 	 */
-	public function & __get($name)
+	public function __get($name)
 	{
 		$ref = static::getReflection();
 		$prop = $ref->getEntityProperty($name);
